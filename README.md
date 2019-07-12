@@ -29,6 +29,9 @@ You also need a working `docker-compose`.
 Run
 ---
 
+
+Start the lab:
+
 ```
 docker-compose up -d && docker-compose logs -f
 ```
@@ -37,3 +40,12 @@ Play
 ----
 
 Open a browser at `nexus.dev` and `jenkins.dev`.
+
+The first time you reach jenkins, you will need to do a boot up configuration.
+You will need to retrieve a password from the container:
+
+```
+docker-compose exec jenkins cat /var/jenkins_home/secrets/initialAdminPassword
+```
+
+Then proceed to install the plugins at your choice and go on.
