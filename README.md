@@ -19,7 +19,7 @@ mkcert nexus.dev
 Add this entries to your `127.0.0.1` line in `/etc/hosts`:
 
 ```
-sudo sed 's/127.0.0.1.*/& nexus.dev jenkins.dev/' /etc/hosts
+sudo sed -i 's/127\.0\.0\.1.*/& nexus.dev jenkins.dev/' /etc/hosts
 ```
 
 (or do it by hand with your favourite editor).
